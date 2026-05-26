@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucente Admin</title>
+  <title>Lucente Work Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main id="loginPage" class="login-page">
     <section class="login-shell">
-      <div class="login-left">
-        <div class="logo">Lucente</div>
-        <h1>Run your brand like a real company.</h1>
-        <p>Track work hours, assign roles, manage goals, and keep Lucente organised.</p>
+      <div class="login-visual">
+        <div class="brand-word">LUCENTE ✦</div>
+        <h1>Build Lucente with focus.</h1>
+        <p>Private work tracking, roles, tasks and productivity for Sahaan and Farris.</p>
       </div>
 
       <div class="login-card">
@@ -32,87 +32,119 @@
 
   <main id="dashboardPage" class="dashboard hidden">
     <aside class="sidebar">
-      <h2>Lucente</h2>
-      <p>Admin Hub</p>
-      <button id="themeToggle">Dark / Light</button>
+      <div class="brand-word">LUCENTE ✦</div>
+      <p class="small-title">WORK HUB</p>
+
+      <nav class="nav">
+        <a class="active">▦ Dashboard</a>
+        <a>◷ Time Tracker</a>
+        <a>☑ Tasks</a>
+        <a>♙ Roles</a>
+        <a>◌ History</a>
+        <a>⚙ Settings</a>
+      </nav>
+
+      <div class="side-card">
+        <div class="lucente-icon">L</div>
+        <h3>Lucente</h3>
+        <p>Discipline today. Excellence always.</p>
+      </div>
+
+      <div class="profile-mini">
+        <div class="avatar">S</div>
+        <div>
+          <strong id="profileName">Sahaan</strong>
+          <p>Lucente Team</p>
+        </div>
+      </div>
+
       <button id="logoutBtn" class="secondary">Log Out</button>
     </aside>
 
     <section class="content">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Welcome back</p>
-          <h1 id="welcomeName">Lucente Team</h1>
+          <h1>Welcome back, <span id="welcomeName">Sahaan</span> 👋</h1>
+          <p>Let's keep building Lucente.</p>
         </div>
-        <div class="live-card">
-          <span>Currently working</span>
-          <strong id="liveStatus">No active session</strong>
-        </div>
+
+        <button id="themeToggle" class="icon-btn">☼</button>
       </header>
+
+      <section class="hero-banner">
+        <div>
+          <h2>Focus. Plan. Execute.</h2>
+          <p>Track your time, manage roles, and grow Lucente to the next level.</p>
+        </div>
+        <div class="hero-moon"></div>
+      </section>
 
       <section class="stats">
         <div class="stat">
+          <div class="stat-icon">◷</div>
+          <p>Active Session</p>
+          <h2 id="liveStatus">No active session</h2>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">▣</div>
           <p>Total Hours</p>
           <h2 id="totalHours">0h</h2>
         </div>
+
         <div class="stat">
+          <div class="stat-icon">✓</div>
           <p>Open Tasks</p>
           <h2 id="openTasks">0</h2>
         </div>
+
         <div class="stat">
-          <p>Goals</p>
-          <h2 id="goalCount">0</h2>
-        </div>
-        <div class="stat">
+          <div class="stat-icon">♚</div>
           <p>Achievements</p>
           <h2 id="achievementCount">0</h2>
         </div>
       </section>
 
-      <section class="grid">
-        <div class="panel hero-panel">
-          <h2>Time Tracker</h2>
+      <section class="main-grid">
+        <div class="panel tracker-panel">
+          <h2>⌁ Time Tracker</h2>
+          <p>Track your work session.</p>
+
           <select id="workRoleSelect"></select>
           <textarea id="workNotesInput" placeholder="What are you working on?"></textarea>
-          <button id="startWorkBtn">Start Work</button>
-          <button id="endWorkBtn" class="danger">End Work</button>
+
+          <div class="button-row">
+            <button id="startWorkBtn">▶ Start Work</button>
+            <button id="endWorkBtn" class="danger">■ End Work</button>
+          </div>
         </div>
 
-        <div class="panel">
-          <h2>Create Task</h2>
-          <input id="taskTitleInput" placeholder="Task title" />
+        <div class="panel task-panel">
+          <div class="panel-head">
+            <h2>⌘ Task Overview</h2>
+          </div>
+
+          <input id="taskTitleInput" placeholder="New task title" />
           <select id="taskRoleSelect"></select>
           <select id="taskPersonSelect">
             <option value="Sahaan">Sahaan</option>
             <option value="Farris">Farris</option>
           </select>
           <input id="taskDeadlineInput" type="date" />
-          <button id="addTaskBtn">Add Task</button>
-        </div>
+          <button id="addTaskBtn">+ Add Task</button>
 
-        <div class="panel">
-          <h2>Announcements</h2>
-          <input id="announcementInput" placeholder="New announcement" />
-          <button id="addAnnouncementBtn">Post</button>
-          <div id="announcementList"></div>
-        </div>
-      </section>
-
-      <section class="grid">
-        <div class="panel wide">
-          <h2>Task Board</h2>
           <div id="taskList"></div>
         </div>
 
-        <div class="panel">
-          <h2>Roles</h2>
-          <input id="newRoleInput" placeholder="Add role" />
+        <div class="panel roles-panel">
+          <h2>♙ Roles</h2>
+          <input id="newRoleInput" placeholder="Add new role" />
           <button id="addRoleBtn">Add Role</button>
           <div id="rolesList"></div>
         </div>
       </section>
 
-      <section class="grid">
+      <section class="bottom-grid">
         <div class="panel">
           <h2>Weekly Work Hours</h2>
           <div id="weeklyChart"></div>
@@ -124,14 +156,19 @@
         </div>
 
         <div class="panel">
+          <h2>Announcements</h2>
+          <input id="announcementInput" placeholder="Post an announcement" />
+          <button id="addAnnouncementBtn">Post</button>
+          <div id="announcementList"></div>
+        </div>
+
+        <div class="panel">
           <h2>Goals / Milestones</h2>
           <input id="goalInput" placeholder="Add goal" />
           <button id="addGoalBtn">Add Goal</button>
           <div id="goalList"></div>
         </div>
-      </section>
 
-      <section class="grid">
         <div class="panel">
           <h2>Deadline Reminders</h2>
           <div id="deadlineList"></div>
@@ -142,8 +179,8 @@
           <div id="achievementList"></div>
         </div>
 
-        <div class="panel">
-          <h2>Work History</h2>
+        <div class="panel wide-panel">
+          <h2>Recent Work Sessions</h2>
           <div id="historyList"></div>
         </div>
       </section>
