@@ -7,25 +7,41 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background-glow"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
 
   <main class="app-shell">
     <section id="loginPage" class="login-page">
-      <div class="brand-card">
-        <p class="eyebrow">Lucente Private Workspace</p>
-        <h1>Track work. Assign roles. Build smarter.</h1>
-        <p class="subtitle">
-          A premium internal dashboard for Sahaan and Farris to manage Lucente tasks, work sessions, and role responsibilities.
-        </p>
+      <div class="login-layout">
+        <div class="hero-content">
+          <div class="logo-mark">L</div>
+          <p class="eyebrow">Lucente Private Workspace</p>
+          <h1>Work tracking for your brand, made clean.</h1>
+          <p class="subtitle">
+            A private dashboard for Sahaan and Farris to track work hours, assign roles, manage tasks, and organise Lucente like a real company.
+          </p>
 
-        <div class="login-box">
-          <input id="emailInput" type="email" placeholder="Approved email address" />
-          <input id="passwordInput" type="password" placeholder="Password" />
+          <div class="feature-row">
+            <div class="feature-pill">Time tracking</div>
+            <div class="feature-pill">Private access</div>
+            <div class="feature-pill">Role management</div>
+          </div>
+        </div>
 
-          <button id="loginBtn">Log In</button>
-          <button id="signupBtn" class="secondary-btn">Create Account</button>
+        <div class="login-card">
+          <h2>Sign in</h2>
+          <p class="muted">Only approved Lucente emails can access this workspace.</p>
 
-          <p id="loginMessage" class="message"></p>
+          <div class="login-box">
+            <input id="emailInput" type="email" placeholder="Approved email address" />
+            <input id="passwordInput" type="password" placeholder="Password" />
+
+            <button id="loginBtn">Log In</button>
+            <button id="signupBtn" class="secondary-btn">Create Account</button>
+
+            <p id="loginMessage" class="message"></p>
+          </div>
         </div>
       </div>
     </section>
@@ -36,28 +52,35 @@
           <p class="eyebrow">Lucente Work Hub</p>
           <h2>Welcome back, <span id="currentUserName">Team</span></h2>
         </div>
-        <button id="logoutBtn" class="secondary-btn">Log Out</button>
+        <button id="logoutBtn" class="secondary-btn logout-btn">Log Out</button>
       </header>
 
       <section class="stats-grid">
         <div class="stat-card">
+          <span class="stat-icon">⏱</span>
           <p>Active Session</p>
           <h3 id="activeSessionText">Not started</h3>
         </div>
         <div class="stat-card">
+          <span class="stat-icon">📊</span>
           <p>Total Sessions</p>
           <h3 id="totalSessions">0</h3>
         </div>
         <div class="stat-card">
+          <span class="stat-icon">✅</span>
           <p>Open Tasks</p>
           <h3 id="openTasks">0</h3>
         </div>
       </section>
 
       <section class="grid-layout">
-        <div class="panel">
-          <h3>Time Tracker</h3>
-          <p class="muted">Start and end your Lucente work session.</p>
+        <div class="panel premium-panel">
+          <div class="panel-header">
+            <div>
+              <h3>Time Tracker</h3>
+              <p class="muted">Start and end Lucente work sessions.</p>
+            </div>
+          </div>
 
           <select id="workRoleSelect"></select>
           <textarea id="workNotesInput" placeholder="What are you working on?"></textarea>
@@ -70,7 +93,7 @@
 
         <div class="panel">
           <h3>Create Task</h3>
-          <p class="muted">Assign a job to Sahaan or Farris.</p>
+          <p class="muted">Assign jobs to Sahaan or Farris.</p>
 
           <input id="taskTitleInput" placeholder="Task title" />
           <select id="taskRoleSelect"></select>
@@ -83,23 +106,29 @@
         </div>
 
         <div class="panel">
-          <h3>Add New Role</h3>
-          <p class="muted">Add more Lucente role categories.</p>
+          <h3>Add Role</h3>
+          <p class="muted">Create more work categories.</p>
 
-          <input id="newRoleInput" placeholder="Example: Design, Finance, Social Media" />
+          <input id="newRoleInput" placeholder="Design, Finance, Social Media..." />
           <button id="addRoleBtn">Add Role</button>
 
           <div id="rolesList" class="chip-list"></div>
         </div>
       </section>
 
-      <section class="panel">
-        <h3>Task Board</h3>
+      <section class="panel wide-panel">
+        <div class="section-title">
+          <h3>Task Board</h3>
+          <p class="muted">Track what needs to be done, what’s active, and what’s finished.</p>
+        </div>
         <div id="taskList" class="task-list"></div>
       </section>
 
-      <section class="panel">
-        <h3>Work History</h3>
+      <section class="panel wide-panel">
+        <div class="section-title">
+          <h3>Work History</h3>
+          <p class="muted">A timeline of Lucente work sessions.</p>
+        </div>
         <div id="historyList" class="history-list"></div>
       </section>
     </section>
