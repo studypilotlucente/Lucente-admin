@@ -3,132 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucente Work Hub</title>
+  <title>Lucente Admin</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-grid"></div>
-  <div class="glow glow-one"></div>
-  <div class="glow glow-two"></div>
-
   <main id="loginPage" class="login-page">
-    <section class="login-hero">
-      <nav class="login-nav">
-        <div class="brand">LUCENTE <span>✦</span></div>
-        <button id="themeToggleLogin" class="ghost-btn">Toggle Theme</button>
-      </nav>
+    <section class="login-shell">
+      <div class="login-left">
+        <div class="logo">Lucente</div>
+        <h1>Run your brand like a real company.</h1>
+        <p>Track work hours, assign roles, manage goals, and keep Lucente organised.</p>
+      </div>
 
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Private Company Workspace</p>
-          <h1>Build Lucente with focus, clarity and style.</h1>
-          <p class="subtitle">
-            Track time, assign roles, manage deadlines, monitor goals and keep the team moving.
-          </p>
-          <div class="hero-actions">
-            <a href="#loginCard" class="primary-link">Enter Workspace</a>
-            <span class="mini-note">Sahaan & Farris only</span>
-          </div>
-        </div>
+      <div class="login-card">
+        <h2>Private Access</h2>
+        <p>Only approved emails can enter.</p>
 
-        <div id="loginCard" class="login-card">
-          <h2>Sign in</h2>
-          <p>Only approved Lucente emails can access this app.</p>
+        <input id="emailInput" type="email" placeholder="Email address" />
+        <input id="passwordInput" type="password" placeholder="Password" />
 
-          <input id="emailInput" type="email" placeholder="Approved email" />
-          <input id="passwordInput" type="password" placeholder="Password" />
+        <button id="loginBtn">Log In</button>
+        <button id="signupBtn" class="secondary">Create Account</button>
 
-          <button id="loginBtn">Log In</button>
-          <button id="signupBtn" class="soft-btn">Create Account</button>
-
-          <p id="loginMessage" class="message"></p>
-        </div>
+        <p id="loginMessage"></p>
       </div>
     </section>
   </main>
 
   <main id="dashboardPage" class="dashboard hidden">
     <aside class="sidebar">
-      <div class="brand">LUCENTE <span>✦</span></div>
-
-      <div class="nav-stack">
-        <a>Dashboard</a>
-        <a>Time Tracker</a>
-        <a>Tasks</a>
-        <a>Roles</a>
-        <a>Goals</a>
-        <a>History</a>
-      </div>
-
-      <div class="profile-card">
-        <div class="avatar" id="profileInitials">SA</div>
-        <div>
-          <strong id="profileName">Sahaan</strong>
-          <p>Lucente Team</p>
-        </div>
-      </div>
+      <h2>Lucente</h2>
+      <p>Admin Hub</p>
+      <button id="themeToggle">Dark / Light</button>
+      <button id="logoutBtn" class="secondary">Log Out</button>
     </aside>
 
-    <section class="main-content">
+    <section class="content">
       <header class="topbar">
         <div>
-          <p class="eyebrow">Lucente Work Hub</p>
-          <h2>Welcome back, <span id="currentUserName">Team</span> 👋</h2>
+          <p class="eyebrow">Welcome back</p>
+          <h1 id="welcomeName">Lucente Team</h1>
         </div>
-        <div class="top-actions">
-          <button id="themeToggle" class="ghost-btn">Dark / Light</button>
-          <button id="logoutBtn" class="soft-btn">Log Out</button>
+        <div class="live-card">
+          <span>Currently working</span>
+          <strong id="liveStatus">No active session</strong>
         </div>
       </header>
 
-      <section class="feature-banner">
-        <div>
-          <h1>Focus. Track. Build.</h1>
-          <p>Turn Lucente into a real system with time tracking, roles, goals, deadlines and team visibility.</p>
-        </div>
-        <div class="floating-card">
-          <span>Currently Working</span>
-          <strong id="liveStatusText">No active session</strong>
-        </div>
-      </section>
-
-      <section class="stats-grid">
-        <div class="stat-card">
-          <p>Active Session</p>
-          <h3 id="activeSessionText">Not started</h3>
-        </div>
-        <div class="stat-card">
+      <section class="stats">
+        <div class="stat">
           <p>Total Hours</p>
-          <h3 id="totalHoursText">0h</h3>
+          <h2 id="totalHours">0h</h2>
         </div>
-        <div class="stat-card">
+        <div class="stat">
           <p>Open Tasks</p>
-          <h3 id="openTasks">0</h3>
+          <h2 id="openTasks">0</h2>
         </div>
-        <div class="stat-card">
+        <div class="stat">
+          <p>Goals</p>
+          <h2 id="goalCount">0</h2>
+        </div>
+        <div class="stat">
           <p>Achievements</p>
-          <h3 id="achievementCount">0</h3>
+          <h2 id="achievementCount">0</h2>
         </div>
       </section>
 
-      <section class="content-grid">
-        <div class="panel tracker-panel">
-          <h3>Time Tracker</h3>
-          <p class="muted">Start and end your work session.</p>
-
+      <section class="grid">
+        <div class="panel hero-panel">
+          <h2>Time Tracker</h2>
           <select id="workRoleSelect"></select>
           <textarea id="workNotesInput" placeholder="What are you working on?"></textarea>
-
-          <div class="two-buttons">
-            <button id="startWorkBtn">▶ Start Work</button>
-            <button id="endWorkBtn" class="danger-btn">■ End Work</button>
-          </div>
+          <button id="startWorkBtn">Start Work</button>
+          <button id="endWorkBtn" class="danger">End Work</button>
         </div>
 
         <div class="panel">
-          <h3>New Task</h3>
-          <p class="muted">Assign work to Sahaan or Farris.</p>
-
+          <h2>Create Task</h2>
           <input id="taskTitleInput" placeholder="Task title" />
           <select id="taskRoleSelect"></select>
           <select id="taskPersonSelect">
@@ -136,74 +87,71 @@
             <option value="Farris">Farris</option>
           </select>
           <input id="taskDeadlineInput" type="date" />
-
           <button id="addTaskBtn">Add Task</button>
         </div>
 
         <div class="panel">
-          <h3>Announcements</h3>
-          <p class="muted">Post team updates.</p>
-
-          <input id="announcementInput" placeholder="Example: New client deadline Friday" />
-          <button id="addAnnouncementBtn">Post Announcement</button>
-
-          <div id="announcementList" class="mini-list"></div>
+          <h2>Announcements</h2>
+          <input id="announcementInput" placeholder="New announcement" />
+          <button id="addAnnouncementBtn">Post</button>
+          <div id="announcementList"></div>
         </div>
       </section>
 
-      <section class="content-grid">
+      <section class="grid">
         <div class="panel wide">
-          <h3>Task Overview</h3>
-          <div id="taskList" class="task-list"></div>
+          <h2>Task Board</h2>
+          <div id="taskList"></div>
         </div>
 
         <div class="panel">
-          <h3>Roles</h3>
-          <input id="newRoleInput" placeholder="Add role e.g. Design" />
+          <h2>Roles</h2>
+          <input id="newRoleInput" placeholder="Add role" />
           <button id="addRoleBtn">Add Role</button>
-          <div id="rolesList" class="chip-list"></div>
+          <div id="rolesList"></div>
         </div>
       </section>
 
-      <section class="content-grid">
+      <section class="grid">
         <div class="panel">
-          <h3>Weekly Work Hours</h3>
-          <div id="weeklyChart" class="bar-chart"></div>
+          <h2>Weekly Work Hours</h2>
+          <div id="weeklyChart"></div>
         </div>
 
         <div class="panel">
-          <h3>Team Productivity</h3>
-          <div id="teamProductivity" class="productivity-list"></div>
+          <h2>Team Productivity</h2>
+          <div id="teamProductivity"></div>
         </div>
 
         <div class="panel">
-          <h3>Goals & Milestones</h3>
-          <input id="goalInput" placeholder="Example: Launch landing page" />
+          <h2>Goals / Milestones</h2>
+          <input id="goalInput" placeholder="Add goal" />
           <button id="addGoalBtn">Add Goal</button>
-          <div id="goalList" class="mini-list"></div>
+          <div id="goalList"></div>
         </div>
       </section>
 
-      <section class="content-grid">
+      <section class="grid">
         <div class="panel">
-          <h3>Deadline Reminders</h3>
-          <div id="deadlineList" class="mini-list"></div>
+          <h2>Deadline Reminders</h2>
+          <div id="deadlineList"></div>
         </div>
 
         <div class="panel">
-          <h3>Lucente Achievements</h3>
-          <div id="achievementList" class="achievement-grid"></div>
+          <h2>Lucente Achievements</h2>
+          <div id="achievementList"></div>
         </div>
 
         <div class="panel">
-          <h3>Work History</h3>
-          <div id="historyList" class="history-list"></div>
+          <h2>Work History</h2>
+          <div id="historyList"></div>
         </div>
       </section>
     </section>
   </main>
 
   <script type="module" src="firebase.js"></script>
+  <script type="module" src="chart.js"></script>
   <script type="module" src="app.js"></script>
 </body>
 </html>
