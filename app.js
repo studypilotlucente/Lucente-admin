@@ -19,8 +19,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const APPROVED_EMAILS = [
-  "PUT_SAHAAN_EMAIL_HERE",
-  "PUT_FARRIS_EMAIL_HERE"
+  "sahaank@icloud.com",
+  "farris.zaman0409@gmail.com"
 ];
 
 const TEAM = ["Sahaan", "Farris"];
