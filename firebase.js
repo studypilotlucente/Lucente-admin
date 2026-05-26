@@ -9,7 +9,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAlK07YBdEMF6CD7gCX2PPbqpuxprzl_n8",
+  apiKey: "AIzaSyAlK07YBdEmF6CD7gCX2PPbqpuxprzl_m8",
   authDomain: "lucente-work-hub.firebaseapp.com",
   projectId: "lucente-work-hub",
   storageBucket: "lucente-work-hub.firebasestorage.app",
