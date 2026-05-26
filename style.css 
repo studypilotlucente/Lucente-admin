@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: #1f2937;
+  background:
+    radial-gradient(circle at top left, #f6dfff, transparent 32%),
+    radial-gradient(circle at top right, #dcecff, transparent 30%),
+    linear-gradient(135deg, #f7f7f8, #e8eaee);
+  min-height: 100vh;
+}
+
+.background-glow {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255,255,255,0.8), rgba(220,230,255,0.3));
+  pointer-events: none;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.login-page {
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+}
+
+.brand-card {
+  max-width: 720px;
+  width: 100%;
+  padding: 46px;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 90px rgba(31, 41, 55, 0.12);
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 800;
+  color: #8b5cf6;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.95;
+  margin: 8px 0 18px;
+  letter-spacing: -0.06em;
+}
+
+h2 {
+  font-size: 34px;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.subtitle,
+.muted {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.login-box {
+  margin-top: 28px;
+  display: grid;
+  gap: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  padding: 15px 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167,139,250,0.15);
+}
+
+button {
+  border: none;
+  border-radius: 18px;
+  padding: 15px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #111827, #8b5cf6);
+  box-shadow: 0 14px 30px rgba(139,92,246,0.22);
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.85);
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.danger-btn {
+  background: linear-gradient(135deg, #9f1239, #fb7185);
+}
+
+.message {
+  color: #8b5cf6;
+  font-weight: 700;
+}
+
+.dashboard {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.stat-card,
+.panel {
+  border-radius: 28px;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 20px 60px rgba(31,41,55,0.08);
+}
+
+.stat-card {
+  padding: 24px;
+}
+
+.stat-card p {
+  color: #6b7280;
+  margin: 0 0 8px;
+}
+
+.stat-card h3 {
+  font-size: 30px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel {
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.chip {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 700;
+}
+
+.task-list,
+.history-list {
+  display: grid;
+  gap: 12px;
+}
+
+.task-card,
+.history-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(249,250,251,0.92);
+  border: 1px solid #eef0f3;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 800;
+  margin-right: 6px;
+}
+
+.small-btn {
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .stats-grid,
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .task-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .brand-card {
+    padding: 28px;
+  }
+}
