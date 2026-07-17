@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Lucente Admin preview">
+  <rect width="1200" height="630" fill="#050816"/>
+  <rect x="88" y="92" width="1024" height="446" rx="38" fill="#0a0f22" stroke="#2d2f4a" stroke-width="3"/>
+  <rect x="152" y="166" width="220" height="120" rx="24" fill="#7c3aed"/>
+  <rect x="152" y="320" width="320" height="20" rx="10" fill="#3b82f6"/>
+  <rect x="152" y="358" width="260" height="20" rx="10" fill="#a855f7"/>
+  <rect x="152" y="396" width="180" height="20" rx="10" fill="#ec4899"/>
+  <text x="152" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#ffffff" letter-spacing="4">LUCENTE</text>
+  <text x="152" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="48" fill="#ffffff">Lucente Admin</text>
+</svg>

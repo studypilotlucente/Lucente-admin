@@ -3,16 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucente Work Hub</title>
+  <meta name="description" content="Lucente Admin is a management platform in development under Lucente Corporate, founded by Sahaan Kesavan and Farris Zaman, for tasks, projects and workflows." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050816" />
+  <title>Lucente Admin | Sahaan Kesavan & Farris Zaman</title>
+  <link rel="canonical" href="https://lucente-admin-five.vercel.app/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="Lucente Admin | Sahaan Kesavan & Farris Zaman" />
+  <meta property="og:description" content="Lucente Admin is a management platform in development under Lucente Corporate, founded by Sahaan Kesavan and Farris Zaman, for tasks, projects and workflows." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lucente-admin-five.vercel.app/" />
+  <meta property="og:image" content="https://lucente-admin-five.vercel.app/assets/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lucente Admin | Sahaan Kesavan & Farris Zaman" />
+  <meta name="twitter:description" content="Lucente Admin is a management platform in development under Lucente Corporate, founded by Sahaan Kesavan and Farris Zaman, for tasks, projects and workflows." />
+  <meta name="twitter:image" content="https://lucente-admin-five.vercel.app/assets/og-image.svg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://lucente-admin-five.vercel.app/#softwareapplication",
+          "name": "Lucente Admin",
+          "url": "https://lucente-admin-five.vercel.app/",
+          "description": "Lucente Admin is a flexible management platform currently in development, designed to help individuals and teams organise tasks, projects, roles, workflows and everyday operations.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "creator": {
+            "@id": "https://lucente-corporate-portfolio.vercel.app/#organization"
+          },
+          "publisher": {
+            "@id": "https://lucente-corporate-portfolio.vercel.app/#organization"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://lucente-corporate-portfolio.vercel.app/#organization",
+          "name": "Lucente Corporate",
+          "url": "https://lucente-corporate-portfolio.vercel.app/",
+          "foundingDate": "2025",
+          "founder": [
+            {
+              "@id": "https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/#person"
+            },
+            {
+              "@id": "https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/#person"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/#person",
+          "name": "Sahaan Kesavan",
+          "url": "https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/",
+          "jobTitle": "Co-Founder & Product Development Lead",
+          "worksFor": {
+            "@id": "https://lucente-corporate-portfolio.vercel.app/#organization"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/#person",
+          "name": "Farris Zaman",
+          "url": "https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/",
+          "jobTitle": "Co-Founder & Strategy and Marketing Lead",
+          "worksFor": {
+            "@id": "https://lucente-corporate-portfolio.vercel.app/#organization"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <main id="loginPage" class="login-page">
-    <section class="login-shell">
+    <section class="login-shell" aria-labelledby="project-intro-title">
       <div class="login-visual">
         <div class="brand-word">LUCENTE ✦</div>
-        <h1>Build Lucente with focus.</h1>
+        <p class="status-pill" aria-label="Project status: In Development">
+          <span class="status-dot amber"></span>
+          <span>In Development</span>
+        </p>
+        <h1 id="project-intro-title">Build Lucente with focus.</h1>
         <p>Private work tracking, roles, tasks and productivity for Sahaan and Farris.</p>
+        <p class="byline">A <a href="https://lucente-corporate-portfolio.vercel.app/">Lucente Corporate</a> project founded by <a href="https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/">Sahaan Kesavan</a> and <a href="https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/">Farris Zaman</a>.</p>
+        <p class="notice">Lucente Admin is currently in development and its features, design and availability may change over time.</p>
       </div>
 
       <div class="login-card">
@@ -27,6 +104,35 @@
 
         <p id="loginMessage"></p>
       </div>
+    </section>
+
+    <section class="info-section" aria-labelledby="about-title">
+      <article class="info-card">
+        <h2 id="about-title">About Lucente Admin</h2>
+        <p>Lucente Admin is a flexible management platform currently in development, designed to help individuals and teams organise tasks, projects, roles, workflows and everyday operations.</p>
+        <p>Project status: <span class="status-pill compact"><span class="status-dot amber"></span><span>In Development</span></span></p>
+        <p>Lucente Admin is a project of Lucente Corporate, founded by Sahaan Kesavan and Farris Zaman.</p>
+        <p><a href="about/">Read the full About page</a> to see the project background and the people behind it.</p>
+      </article>
+
+      <article class="info-card">
+        <h2>Who is behind Lucente Admin?</h2>
+        <div class="founder-grid">
+          <article class="founder-card">
+            <h3>Sahaan Kesavan</h3>
+            <p class="job-title">Co-Founder &amp; Product Development Lead</p>
+            <p>Sahaan Kesavan leads product development, application building, technical delivery and feature planning for Lucente Corporate projects.</p>
+            <a href="https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/">View Sahaan’s Profile ↗</a>
+          </article>
+
+          <article class="founder-card">
+            <h3>Farris Zaman</h3>
+            <p class="job-title">Co-Founder &amp; Strategy and Marketing Lead</p>
+            <p>Farris Zaman leads strategic planning, marketing, brand positioning and creative direction for Lucente Corporate projects.</p>
+            <a href="https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/">View Farris’s Profile ↗</a>
+          </article>
+        </div>
+      </article>
     </section>
   </main>
 
@@ -186,6 +292,11 @@
       </section>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p><strong>Lucente Admin</strong> is a project by <a href="https://lucente-corporate-portfolio.vercel.app/">Lucente Corporate</a>, founded by <a href="https://lucente-corporate-portfolio.vercel.app/founders/sahaan-kesavan/">Sahaan Kesavan</a> and <a href="https://lucente-corporate-portfolio.vercel.app/founders/farris-zaman/">Farris Zaman</a>.</p>
+    <p class="footer-status"><span class="status-pill compact"><span class="status-dot amber"></span><span>In Development</span></span></p>
+  </footer>
 
   <script type="module" src="firebase.js"></script>
   <script type="module" src="chart.js"></script>
